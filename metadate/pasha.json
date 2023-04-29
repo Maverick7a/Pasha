@@ -1,0 +1,44 @@
+{
+    "name": "PashaPro",
+    "description": "Best CB Pasha",
+    "image": "https://gateway.pinata.cloud/ipfs/QmXpvYCtkvLcLkVfm9faq5Q84CvPhWXsLqv3c2Tu8YY3NL/Pavlo%20Palka.png",
+
+    "atributes": [
+        {
+            "display_type" : "number",
+            "trait_type" : "PAC" , 
+            "value" : "97" 
+        },
+
+        {
+            "display_type" :"number",
+            "trait_type" : "SHO" ,
+            "value" : "95"
+        },
+
+        {
+            "display_type" :"number",
+            "trait_type" : "PAS" ,
+            "value" : "92"
+        },
+
+        {
+            "display_type" :"number",
+            "trait_type" : "DRI" ,
+            "value" : "95"
+        },
+
+        {
+            "display_type" :"number",
+            "trait_type" : "DEF" ,
+            "value" : "99"
+        },
+
+        {
+            "display_type" :"number",
+            "trait_type" : "PHY",
+            "value" : "91"
+        }
+
+    ]
+}
