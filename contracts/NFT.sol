@@ -14,7 +14,7 @@ contract Pasha is ERC1155 , AccessControl {
 
     bytes32 public constant CREATOR_ROLE = keccak256("CREATOR_ROLE"); 
 
-    constructor() ERC1155 ("https://gateway.pinata.cloud/ipfs/QmYT365KWNJgbqs4QGcytCu8eXnGEwF2Tby3nuTmjb1h26/{id}.json") {
+    constructor() ERC1155 ("https://gateway.pinata.cloud/ipfs/QmX4Pkv1PEajT5U79g2wQgbhvtpMK5iAoKgk99udNkdXtU/{id}.json") {
         _grantRole(DEFAULT_ADMIN_ROLE,msg.sender);
         _grantRole(CREATOR_ROLE, msg.sender);
         mint(msg.sender, "0x0");
@@ -35,8 +35,10 @@ contract Pasha is ERC1155 , AccessControl {
         return
             string(
                 abi.encodePacked(
-                    "https://gateway.pinata.cloud/ipfs/QmYT365KWNJgbqs4QGcytCu8eXnGEwF2Tby3nuTmjb1h26/pasha",
+                    "https://gateway.pinata.cloud/ipfs/QmX4Pkv1PEajT5U79g2wQgbhvtpMK5iAoKgk99udNkdXtU/",
+                    Strings.toString(_id),
                     ".json"
+                    
                 )
             );
     }
