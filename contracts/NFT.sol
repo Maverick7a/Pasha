@@ -7,6 +7,12 @@ import "@openzeppelin/contracts/access/AccessControl.sol";
 
 contract Pasha is ERC1155 , AccessControl {
 
+    event Mint (
+        address indexed to,
+        uint id,
+        uint amount
+    );
+
     string public name = "Football";
     string public symbol = "PP10";
 
@@ -14,17 +20,23 @@ contract Pasha is ERC1155 , AccessControl {
 
     bytes32 public constant CREATOR_ROLE = keccak256("CREATOR_ROLE"); 
 
-    constructor() ERC1155 ("https://gateway.pinata.cloud/ipfs/QmX4Pkv1PEajT5U79g2wQgbhvtpMK5iAoKgk99udNkdXtU/{id}.json") {
+    constructor() ERC1155 ("xxx culka/{id}.json") {
         _grantRole(DEFAULT_ADMIN_ROLE,msg.sender);
         _grantRole(CREATOR_ROLE, msg.sender);
-        mint(msg.sender, "0x0");
+        
     }
 
-    function mint(address _to, bytes memory _data) public onlyRole(CREATOR_ROLE){
-        require(totalTokens <1, "Only 1 token can be minted");
-        _mint (_to, 1, 1, _data);
-        totalTokens+=1;
+    function mint(address _to,uint _id, uint _amount, bytes memory _data) public onlyRole(CREATOR_ROLE){
+        _mint(_to, _id, _amount, _data);
+        emit Mint(_to,_id,_amount);
 
+    }
+
+    function mintBatch(address _to, uint[] memory _id, uint[] memory _amount, bytes memory _data) public onlyRole(CREATOR_ROLE){
+       _mintBatch(_to, _id, _amount, _data);
+        for (uint i = 0; i < _id.length; i++) {
+            emit Mint(_to, _id[i], _amount[i]);
+        }
     }
 
     function addCreatorRole() public onlyRole(DEFAULT_ADMIN_ROLE){
@@ -35,7 +47,7 @@ contract Pasha is ERC1155 , AccessControl {
         return
             string(
                 abi.encodePacked(
-                    "https://gateway.pinata.cloud/ipfs/QmX4Pkv1PEajT5U79g2wQgbhvtpMK5iAoKgk99udNkdXtU/",
+                    "xxxculka/",
                     Strings.toString(_id),
                     ".json"
                     

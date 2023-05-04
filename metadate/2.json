@@ -1,37 +1,37 @@
 {
-    "name": "Pasha ICON",
-    "description": "Best CB Pasha",
-    "image": "xxx culka pinata",
+    "name": "Pasha TOTY",
+    "descriptions": "Best CB Pasha" ,
+    "image" : "xxxculka pinata" ,
     "attributes": [
         {
             "display_type" : "number",
             "trait_type" : "PAC" , 
-            "value" : "90" 
+            "value" : "96" 
         },
         {
             "display_type" :"number",
             "trait_type" : "SHO" ,
-            "value" : "92"
-        },
-        {
-            "display_type" :"number",
-            "trait_type" : "PAS" ,
-            "value" : "92"
-        },
-        {
-            "display_type" :"number",
-            "trait_type" : "DRI" ,
-            "value" : "88"
-        },
-        {
-            "display_type" :"number",
-            "trait_type" : "DEF" ,
             "value" : "97"
         },
         {
             "display_type" :"number",
+            "trait_type" : "PAS" ,
+            "value" : "95"
+        },
+        {
+            "display_type" :"number",
+            "trait_type" : "DRI" ,
+            "value" : "95"
+        },
+        {
+            "display_type" :"number",
+            "trait_type" : "DEF" ,
+            "value" : "99"
+        },
+        {
+            "display_type" :"number",
             "trait_type" : "PHY",
-            "value" : "91"
+            "value" : "99"
         },
         {
             "trait_type": "Alternative positions",
@@ -40,3 +40,4 @@
 
     ]
 }
+        
